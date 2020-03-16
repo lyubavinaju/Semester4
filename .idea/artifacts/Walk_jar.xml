@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Walk:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Walk_jar</output-path>
+    <root id="archive" name="Walk.jar">
+      <element id="module-output" name="Walk" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,19 @@
+java -cp . -p . -m info.kgeorgiy.java.advanced.walk RecursiveWalk ru.ifmo.rain.lyubavina.walk.RecursiveWalk
+java -cp . -p . -m info.kgeorgiy.java.advanced.arrayset NavigableSet ru.ifmo.rain.lyubavina.arrayset.ArraySet
+java -cp . -p . -m info.kgeorgiy.java.advanced.student StudentGroupQuery ru.ifmo.rain.lyubavina.student.StudentDB
+java -cp . -p . -m info.kgeorgiy.java.advanced.implementor class ru.ifmo.rain.lyubavina.implementor.Implementor
+
+
+javac ru/ifmo/rain/lyubavina/*/*.java
+javac info/kgeorgiy/java/advanced/*/*.java
+java -cp . -p . -m info.kgeorgiy.java.advanced.implementor jar-class ru.ifmo.rain.lyubavina.implementor.Implementor
+rm -r /var/folders/x9/9z4rj3s91w1fl6d3vrl34gb00000gn/T/temp[0-9]*
+
+java -jar ../Implementor.jar -jar ru.ifmo.rain.lyubavina.implementor.Implementor  /Users/elenalubavina/Desktop/Implementor_Jar/A.jar
+
+java -jar ../Implementor.jar ru.ifmo.rain.lyubavina.implementor.Implementor  /Users/elenalubavina/Desktop/Implementor_Jar
+jar cfm ../Implementor.jar Manifest.txt ru/ifmo/rain/lyubavina/implementor/*.class info/kgeorgiy/java/advanced/implementor/*.class
+javadoc -source 8 -link https://docs.oracle.com/javase/8/docs/api  -d /Users/elenalubavina/Desktop/Walk/src/javadoc -private -author /Users/elenalubavina/Desktop/Walk/src/ru/ifmo/rain/lyubavina/implementor/Implementor.java info/kgeorgiy/java/advanced/implementor/*java
+
+
+java -cp . -p . -m info.kgeorgiy.java.advanced.concurrent scalar ru.ifmo.rain.lyubavina.concurrent.IterativeParallelism
